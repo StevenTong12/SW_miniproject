@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> 
+
+    <title>Home</title> 
+
+    <link rel="stylesheet" type="text/css" href="home.css"> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="home.js"></script> 
+
+</head>
+<body> 
+    
+    <div id="container"> 
+
+        <div id="top"> 
+            <h1>Welcome to the COVID-19 Tracker!</h1> 
+            <div id="main_container" style="display:block;"> 
+                <button onclick="homeApp.logout();">Sign Out</button> 
+            </div> 
+        </div> 
+        
+        <!-- <div id="welcome">
+            <div id="main_container" style="display:block;"> 
+                <button onclick="homeApp.logout();">Sign Out</button> 
+            </div> 
+        </div> -->
+        <div id="nav"> 
+            <a href="home.html">HOME</a> 
+            <a href="tips.html">TIPS</a> 
+            <a href="seekhelp.html">SEEK HELP</a> 
+        </div> 
+
+        <div id="left"> 
+
+        </div> 
+
+        <div id="right"> 
+
+        </div> 
+
+        <div id="bottom">
+
+        </div>
+
+    </div> 
+</body>
+</html>
