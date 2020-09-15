@@ -1,10 +1,21 @@
+/* https://coolors.co/1a1423-372549-774c60-b75d69-eacdc2 */ 
+
 #container 
 { 
     width: 1200px; 
-    height: 900px; 
+    height: 1500px; 
     background-color: white;   
     margin: auto; 
 } 
+
+/* #logo 
+{ 
+    width: 50px; 
+    height: 56px; 
+    float: left; 
+    background-image: url(Logo.jpg); 
+    background-color: #774C60; 
+} */
 
 #top  
 { 
@@ -14,9 +25,13 @@
     height: 20%; 
     background-color: yellow; 
     float: left;  */ 
-    width: 1200px; 
+    width: 1050px; 
     height: 50px; 
     background-color: #774C60; 
+    float: left; 
+    padding-bottom: 6px; 
+    z-index: 100; 
+    position: relative; 
 } 
 
 #top h1 
@@ -25,24 +40,52 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     font-size: 45px; 
     color: #EACDC2; 
-    text-decoration: underline; 
+    line-height: 0px; 
+    margin-left: 60px; 
 } 
 
-#main_container 
+#button_container  
 { 
+    width: 150px; 
+    height: 50px; 
     float: right; 
+    padding-bottom: 3px; 
+    z-index: 100; 
+    position: relative; 
 }
 
-/* #main_container button 
+#button_container button 
 { 
-    width: 100px; 
-    height: 50px; 
+    width: 150px; 
+    height: 56px; 
+    font-size: 30px; 
+    font-weight: bold; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    letter-spacing: 2px; 
     cursor: pointer; 
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 20px; 
-    float: left; 
-    background-color: gray; 
-}  */
+    color: #EACDC2; 
+    background-color: #774C60; 
+    border: 1px solid #EACDC2; 
+} 
+
+#button_container button:hover 
+{ 
+    background-color: lightgray; 
+    color: white; 
+    font-size: 31px; 
+}
+
+#banner 
+{
+    width: 1200px; 
+    height: 600px; 
+    background-image: url(Banner.jpg);  
+    background-position:65% 35%; 
+    border-top: 1px solid #EACDC2; 
+    opacity: 0.9; 
+    z-index: 1; 
+    position: relative; 
+}
 
 #nav  
 {
@@ -54,7 +97,7 @@
 
 #nav a 
 { 
-	width: 400px; 
+	width: 399px; 
 	height: 50px; 
 	text-align: center; 
     float: left; 
@@ -63,11 +106,13 @@
     font-size: 35px; 
     letter-spacing: 2px; 
     color: #EACDC2; 
+    border-top: 1px solid #EACDC2; 
+    border-left: 1px solid #EACDC2; 
 } 
 
 #nav a:hover 
 { 
-    width: 400px; 
+    width: 399px; 
 	background-color: lightgray; 
 	height: 50px; 
 	display: block; 
@@ -81,24 +126,93 @@
 #left 
 { 
     width: 400px; 
-    height: 750px; 
+    height: 720px; 
     display: block; 
     float: left; 
-    background-color: brown; 
+    background-color: #B75D69; 
+    border-left: 5px solid white; 
+    border-top: 5px solid white; 
+    border-bottom: 5px solid white; 
+    border-right: 5px solid white; 
+    border-radius: 6%; 
 } 
+
+#left h2 
+{
+    text-align: center; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    color: #EACDC2; 
+    letter-spacing: 1px; 
+    font-size: 35px; 
+    line-height: 20%;
+}
+
+#left img 
+{ 
+    margin-left: 10px; 
+    border: 1px solid black; 
+}
+
+#left h3 
+{ 
+    text-align: center; 
+    font-size: 25px; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    color: #EACDC2; 
+    line-height: 20%; 
+} 
+
+#left p 
+{ 
+    margin-left: 6px; 
+    margin-right: 6px; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    color: #EACDC2; 
+    font-weight: bold; 
+    font-size: 18px; 
+}
 
 #right 
 { 
-    width: 800px; 
-    height: 750px; 
-    background-color: lightsalmon; 
+    width: 780px; 
+    height: 720px; 
+    background-color: #B75D69; 
     float: right; 
+    border-left: 5px solid white; 
+    border-top: 5px solid white; 
+    border-bottom: 5px solid white; 
+    border-right: 5px solid white; 
+    border-radius: 3%; 
 } 
+
+#right h2 
+{ 
+    color: #EACDC2; 
+    font-size: 45px; 
+    text-align: center; 
+}
+
+#right span 
+{ 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    color: #EACDC2; 
+    font-size: 25px; 
+    margin-left: 10px; 
+    font-style: oblique;  
+}
 
 #bottom 
 {
     width: 1200px; 
-    height: 50px; 
-    background-color: black; 
+    height: 100px; 
+    background-color: #774C60;  
     float: left; 
-}
+} 
+
+#bottom p  
+{
+    margin-left: 10px; 
+    font-size: 19px; 
+    color: #EACDC2; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+} 
