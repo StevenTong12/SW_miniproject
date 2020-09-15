@@ -4,6 +4,7 @@
     <title>Home</title> 
 
     <link rel="stylesheet" type="text/css" href="home.css"> 
+    <script src="click.js"></script> 
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +20,17 @@
     
     <div id="container"> 
 
-        <div id="logo"> 
-
-        </div>
-
         <div id="top"> 
-            <h1>Welcome to the COVID-19 Tracker!</h1>  
+
+            <div id="logo"> 
+                <a onclick="myFunction()" href="home.html"> 
+                <img src="Logo.jpg" style="width:50px; height: 50px;"> 
+                </a> 
+            </div> 
+
+            <div id="welcome">
+                <h1>Welcome to the COVID-19 Tracker!</h1> 
+            </div> 
         </div> 
         
         <div id="button_container"> 
@@ -42,8 +48,7 @@
         </div> 
 
         <div id="left"> 
-            <h2>Simple Things to</h2> 
-            <h2>Prevent the Spread!</h2> 
+            <h2>Random Tip!</h2> 
             <img src="WashHands.jpg" style="width: 380px; height: 200px;"> 
 
             <h3>Washing your hands!</h3> 
@@ -71,6 +76,77 @@
                 <span>Are you experiencing any of the following symptoms: </span> 
                 <br> 
             </p> 
+
+
+            <p> 
+                Fever of 100 degrees (Fahrenheit) or more? (Select ONLY ONE) 
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p>
+
+            <p> 
+                Coughing? (Select ONLY ONE) 
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p> 
+
+            <p> 
+                Runny nose? (Select ONLY ONE)
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p>
+            
+            <p> 
+                Lost of taste/smell? (Select ONLY ONE) 
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+
+            </p> 
+
+            <p>
+                Difficulty breathing/Shortness of breath? (Select ONLY ONE) 
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p> 
+
+            <p> 
+                Sore throat? (Select ONLY ONE)
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p>
+
+            <p> 
+                Vomiting? (Select ONLY ONE) 
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p>
+
+            <p> 
+                Muscle aches? (Select ONLY ONE) 
+                <br> 
+                YES <input id="Q1" type="checkbox" name="Q1" value="YES">  
+                NO <input id="Q1" type="checkbox" name="Q1" value="NO"> 
+                <br> 
+            </p>
+
+            <p>
+                <input id="submit" type="submit" name="classMode" value="Submit"> 
+            </p> 
+
         </div> 
 
         <div id="bottom">
