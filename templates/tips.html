@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html> 
+
+    <title>Tips</title> 
+
+    <link rel="stylesheet" type="text/css" href="../static/tips.css"> 
+    <script src="../static/click.js"></script> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="../static/firebase.js"></script>
+    <script src="../static/home.js"></script> 
+
+</head>
+<body> 
+    
+    <div id="container"> 
+
+        <div id="top"> 
+
+            <div id="logo"> 
+                <a onclick="myFunction()" href="home"> 
+                <img src="../static/Logo.jpg" style="width:50px; height: 50px;"> 
+                </a> 
+            </div> 
+
+            <div id="welcome">
+                <h1>Tips to Prevent the Spread!</h1> 
+            </div> 
+        </div> 
+        
+        <div id="button_container"> 
+            <button onclick="homeApp.logout();">Sign Out</button> 
+        </div> 
+
+        <div id="banner">
+
+        </div> 
+
+        <div id="nav"> 
+            <a href="home">HOME</a> 
+            <a href="tips">TIPS</a> 
+            <a href="seekhelp">SEEK HELP</a> 
+        </div> 
+
+        <div id="LMcontainer">
+
+            <div id="left"> 
+                <h2>Wear a mask!</h2> 
+                <img src="../static/WearMask.jpg" style="width: 380px; height: 200px;"> 
+    
+                <p> 
+                    1. Place each loop around each ear. Try not to stretch them out too 
+                    much or they could break/loosen. 
+                    <br> 
+                    <br> 
+                    2. Pull the mask across your face making sure that your nostrils and 
+                    mouth are completely covered.  
+                    <br> 
+                    <br> 
+                    3. Adjust the mask so that it is right above your nostrils and under 
+                    your chin. 
+                </p> 
+
+                <p> 
+                    <i>
+                    Note: Keep in mind other measures like social distancing should be taken
+                    even when wearing a mask.  
+                    </i> 
+                </p>
+            </div> 
+
+            <div id="mid"> 
+                <h2>Avoid touching</h2> 
+                <h2>your face!</h2> 
+                <img src="../static/TouchFace.jpg" style="width: 360px; height: 200px;"> 
+
+                <p> 
+                    Avoid touching your nose, mouth or eyes! Those are sure ways that COVID-19 
+                    can get into your system! 
+                    <br> 
+                    <br> 
+                    If you need to touch your nose, mouth or eyes, wait until you get home or 
+                    when you get the chance to properly clean your face and hands. 
+                </p> 
+            </div> 
+
+        </div>
+
+        <div id="right"> 
+            <h2>Hand Sanitizer!</h2> 
+            <img src="../static/HandSanitizer.jpg" style="width: 360px; height: 200px;"> 
+            <p>
+                1. Be very careful when selecting hand sanitizer! Right now, there are so many recalled
+                brands/hand sanitizers out there that could do lasting damage to your body. 
+                <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-hand-sanitizers-consumers-should-not-use">Here is a link that
+                shows you all of the recalled hand sanitizers.</a> 
+                <br> 
+                <br> 
+                2. Make sure that the hand sanitizer you purchase has at least 70% alcohol! 
+                Anything less than that will not do the job, you need 70% alcohol content in your hand 
+                sanitizer for viral. 
+                <br>
+                <br> 
+                3. When applying hand sanitizer, make sure you get between your fingers, palms and the 
+                back of your hand. Ensure that the hand sanitizer wets your hands for at least 30 seconds 
+                for optimal effect. 
+            </p>
+        </div> 
+
+        <div id="bottom">
+            <p>Senior Design Software Mini-Project 2020 </p>
+            <p>&copy Steven Tong & Jaden Tayag 2020</p> 
+        </div>
+
+    </div> 
+</body>
+</html>
