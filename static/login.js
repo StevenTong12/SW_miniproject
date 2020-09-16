@@ -1,6 +1,6 @@
 // FirebaseUI config.
 var uiConfig = {
-  signInSuccessUrl: 'home.html',
+  signInSuccessUrl: 'home',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
           //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -11,7 +11,7 @@ var uiConfig = {
           //firebase.auth.PhoneAuthProvider.PROVIDER_ID
   ],
   // Terms of service url.
-  tosUrl: 'home.html'
+  tosUrl: 'home'
 };
 
 // Initialize the FirebaseUI Widget using Firebase.
