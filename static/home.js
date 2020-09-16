@@ -5,7 +5,7 @@ var homeContainer = document.getElementById("home_container");
     var logtout =  function(){
         firebase.auth().signOut().then(function(){
             console.log('success');
-            window.location.replace("home");
+            window.location.replace("/");
         },
         function(){})
     }

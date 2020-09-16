@@ -70,15 +70,18 @@ def login():
 
 @app.route("/home", methods = ['POST','GET'])
 def home():
-    email = request.form.get("email")
-    print(email)
-    password = request.form.get("password")
-    print(password)
-    user = signIn(email,password)
-    session['user'] = user
-    username = email.split('@')[0].lower()
-    session['username'] = username
-    return render_template('home.html', username = username)
+    if request.method == "POST":
+        email = request.form.get("email")
+        print(email)
+        password = request.form.get("password")
+        print(password)
+        user = signIn(email,password)
+        session['user'] = user
+        username = email.split('@')[0].lower()
+        session['username'] = username
+        return render_template('home.html', username = username)
+    else:
+        return render_template('home.html')
 
 @app.route("/signup", methods = ['POST','GET'])
 def signup():
@@ -126,7 +129,8 @@ def complete():
     y = json.dumps(s.__dict__)
     db.child("users").child(username).child(today).set(y)
     db.child("adminDashboard").child(today).child("completedSurveys").set(tally)
-    db.child("adminDashboard").child(today).child("symptomTally").set(symptomTotal)
+    y = json.dumps(symptomTotal)
+    db.child("adminDashboard").child(today).child("symptomTally").set(y)
     return render_template('complete.html')
 
 @app.route("/help", methods = ['POST','GET'])
