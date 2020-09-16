@@ -133,7 +133,7 @@ def complete():
     db.child("adminDashboard").child(today).child("symptomTally").set(y)
     return render_template('complete.html')
 
-@app.route("/help", methods = ['POST','GET'])
+@app.route("/seekhelp", methods = ['POST','GET'])
 def help():
     return render_template('seekhelp.html')
 

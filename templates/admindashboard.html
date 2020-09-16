@@ -3,8 +3,8 @@
 
     <title>Administrator Dashboard</title> 
 
-    <link rel="stylesheet" type="text/css" href="admindashboard.css"> 
-    <script src="click.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../static/admindashboard.css"> 
+    <script src="../static/click.js"></script> 
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,8 @@
 
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
-    <script src="firebase.js"></script>
-    <script src="home.js"></script> 
+    <script src="../static/firebase.js"></script>
+    <script src="../static/home.js"></script> 
 
 </head>
 <body> 
@@ -23,8 +23,8 @@
         <div id="top"> 
 
             <div id="logo"> 
-                <a onclick="myFunction()" href="home.html"> 
-                <img src="Logo.jpg" style="width:50px; height: 50px;"> 
+                <a onclick="myFunction()" href="home"> 
+                <img src="../static/Logo.jpg" style="width:50px; height: 50px;"> 
                 </a> 
             </div> 
 
@@ -42,29 +42,29 @@
         </div> 
 
         <div id="nav"> 
-            <a href="home.html">HOME</a> 
-            <a href="tips.html">TIPS</a> 
-            <a href="seekhelp.html">SEEK HELP</a> 
+            <a href="home">HOME</a> 
+            <a href="tips">TIPS</a> 
+            <a href="seekhelp">SEEK HELP</a> 
             <a href="dashboard">DASHBOARD</a> 
         </div> 
 
             <div id="left"> 
                 <h2>Surveys Data</h2> 
-                <img src="Symptoms.jpg" style="width: 380px; height: 220px;"> 
+                <img src="../static/Symptoms.jpg" style="width: 380px; height: 220px;"> 
                 <p>Surveys taken: {{tally}}</p>
-                <p>Number of fevers: {{symptomTotal['fever']}}</p>
-                <p>Number of coughs: {{symptomTotal['cough']}}</p>
-                <p>Number of nose: {{symptomTotal['nose']}}</p>
-                <p>Number of loss: {{symptomTotal['loss']}}</p>
-                <p>Number of sob: {{symptomTotal['sob']}}</p>
-                <p>Number of throat: {{symptomTotal['throat']}}</p>
-                <p>Number of vomit: {{symptomTotal['vomit']}}</p>
-                <p>Number of ache: {{symptomTotal['ache']}}</p>
+                <p>Students experiencing fevers: {{symptomTotal['fever']}}</p>
+                <p>Students experiencing coughing: {{symptomTotal['cough']}}</p>
+                <p>Students experiencing runny noses: {{symptomTotal['nose']}}</p>
+                <p>Students experiencing loss of taste/smell: {{symptomTotal['loss']}}</p>
+                <p>Students experiencing difficulty breathing/shortness of breath: {{symptomTotal['sob']}}</p>
+                <p>Students experiencing sore throat: {{symptomTotal['throat']}}</p>
+                <p>Students experiencing vomiting: {{symptomTotal['vomit']}}</p>
+                <p>Students experiencing muscle aches: {{symptomTotal['ache']}}</p>
             </div> 
 
         <div id="right"> 
             <h2>US and Massachusetts</h2> 
-            <img src="MA.jpg" style="width: 300px; height: 200px;"> 
+            <img src="../static/MA.jpg" style="width: 300px; height: 200px;"> 
             <p>Number of positive cases in US: {{statsUS.positive}}</p>
             <p>Number of new cases in US: {{statsUS.new}}</p>
             <p>Number of negative cases in US: {{statsUS.negative}}</p>
