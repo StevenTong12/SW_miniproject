@@ -1,17 +1,98 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <p>Number of positive cases in US: {{statsUS.positive}}</p>
-        <p>Number of new cases in US: {{statsUS.new}}</p>
-        <p>Number of negative cases in US: {{statsUS.negative}}</p>
-        <p>Number of recovered patients in US: {{statsUS.recovered}}</p>
-        <p>Number of deaths in US: {{statsUS.deaths}}</p>
-        <p>Number of new deaths in US: {{statsUS.newDeaths}}</p>
-        <p>Number of positive cases in MA: {{statsMA.positive}}</p>
-        <p>Number of new cases in MA: {{statsMA.new}}</p>
-        <p>Number of negative cases in MA: {{statsMA.negative}}</p>
-        <p>Number of recovered patients in MA: {{statsMA.recovered}}</p>
-        <p>Number of deaths in MA: {{statsMA.deaths}}</p>
-        <p>Number of new deaths in MA: {{statsMA.newDeaths}}</p>
-    </body>
+<html> 
+
+    <title>Administrator Dashboard</title> 
+
+    <link rel="stylesheet" type="text/css" href="dashboard.css"> 
+    <script src="click.js"></script> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="home.js"></script> 
+
+</head>
+<body> 
+    
+    <div id="container"> 
+
+        <div id="top"> 
+
+            <div id="logo"> 
+                <a onclick="myFunction()" href="home.html"> 
+                <img src="Logo.jpg" style="width:50px; height: 50px;"> 
+                </a> 
+            </div> 
+
+            <div id="welcome">
+                <h1>Dashboard</h1> 
+            </div> 
+        </div> 
+        
+        <div id="button_container"> 
+            <button onclick="homeApp.logout();">Sign Out</button> 
+        </div> 
+
+        <div id="banner">
+
+        </div> 
+
+        <div id="nav"> 
+            <a href="home.html">HOME</a> 
+            <a href="tips.html">TIPS</a> 
+            <a href="seekhelp.html">SEEK HELP</a> 
+            <a href="dashboard.html">DASHBOARD</a> 
+        </div> 
+
+            <div id="left"> 
+                <h2>No Parties!</h2> 
+                <img src="Party.jpg" style="width: 380px; height: 220px;"> 
+                <p>
+                    <span>Please do not hold any parties or gatherings!</span> 
+                    <br> 
+                    <br> 
+                    Parties are one sure way for COVID-19 to spread rapidly. There 
+                    is no social distancing when people are crammed into an area for 
+                    long periods of time. Even a mask won't be enough to help you! 
+                    <br> 
+                    <br> 
+                    On top of that, alcohol could make people more vulnerable to COVID-19. 
+                    Many studies show that after drinking alcohol, people tend to be 
+                    more immune to viral diseases like COVID-19. 
+                    <br> 
+                    <br> 
+                    I know many people miss seeing their friends but, it is not worth it to 
+                    hang out with friends and put people at risk of contracting COVID-19. 
+                </p>
+
+            </div> 
+
+        <div id="right"> 
+            <h2>US and Massachusetts</h2> 
+            <img src="MA.jpg" style="width: 300px; height: 200px;"> 
+            <p>Number of positive cases in US: {{statsUS.positive}}</p>
+            <p>Number of new cases in US: {{statsUS.new}}</p>
+            <p>Number of negative cases in US: {{statsUS.negative}}</p>
+            <p>Number of recovered patients in US: {{statsUS.recovered}}</p>
+            <p>Number of deaths in US: {{statsUS.deaths}}</p>
+            <p>Number of new deaths in US: {{statsUS.newDeaths}}</p>
+            <p>Number of positive cases in MA: {{statsMA.positive}}</p>
+            <p>Number of new cases in MA: {{statsMA.new}}</p>
+            <p>Number of negative cases in MA: {{statsMA.negative}}</p>
+            <p>Number of recovered patients in MA: {{statsMA.recovered}}</p>
+            <p>Number of deaths in MA: {{statsMA.deaths}}</p>
+            <p>Number of new deaths in MA: {{statsMA.newDeaths}}</p> 
+        </div> 
+
+        <div id="bottom">
+            <p>Senior Design Software Mini-Project 2020 </p>
+            <p>&copy Steven Tong & Jaden Tayag 2020</p> 
+        </div>
+
+    </div> 
+</body>
 </html>
