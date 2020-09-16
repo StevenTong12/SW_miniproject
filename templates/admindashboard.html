@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <body>
         <p>Surveys taken: {{tally}}</p>
@@ -23,4 +23,93 @@
         <p>Number of deaths in MA: {{statsMA.deaths}}</p>
         <p>Number of new deaths in MA: {{statsMA.newDeaths}}</p>
     </body>
+</html>  -->
+<!DOCTYPE html>
+<html> 
+
+    <title>Administrator Dashboard</title> 
+
+    <link rel="stylesheet" type="text/css" href="admindashboard.css"> 
+    <script src="click.js"></script> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="home.js"></script> 
+
+</head>
+<body> 
+    
+    <div id="container"> 
+
+        <div id="top"> 
+
+            <div id="logo"> 
+                <a onclick="myFunction()" href="home.html"> 
+                <img src="Logo.jpg" style="width:50px; height: 50px;"> 
+                </a> 
+            </div> 
+
+            <div id="welcome">
+                <h1>Administrator Dashboard</h1> 
+            </div> 
+        </div> 
+        
+        <div id="button_container"> 
+            <button onclick="homeApp.logout();">Sign Out</button> 
+        </div> 
+
+        <div id="banner">
+
+        </div> 
+
+        <div id="nav"> 
+            <a href="home.html">HOME</a> 
+            <a href="tips.html">TIPS</a> 
+            <a href="seekhelp.html">SEEK HELP</a> 
+            <a href="dashboard">DASHBOARD</a> 
+        </div> 
+
+            <div id="left"> 
+                <h2>Surveys Data</h2> 
+                <img src="Symptoms.jpg" style="width: 380px; height: 220px;"> 
+                <p>Surveys taken: {{tally}}</p>
+                <p>Number of fevers: {{symptomTotal['fever']}}</p>
+                <p>Number of coughs: {{symptomTotal['cough']}}</p>
+                <p>Number of nose: {{symptomTotal['nose']}}</p>
+                <p>Number of loss: {{symptomTotal['loss']}}</p>
+                <p>Number of sob: {{symptomTotal['sob']}}</p>
+                <p>Number of throat: {{symptomTotal['throat']}}</p>
+                <p>Number of vomit: {{symptomTotal['vomit']}}</p>
+                <p>Number of ache: {{symptomTotal['ache']}}</p>
+            </div> 
+
+        <div id="right"> 
+            <h2>US and Massachusetts</h2> 
+            <img src="MA.jpg" style="width: 300px; height: 200px;"> 
+            <p>Number of positive cases in US: {{statsUS.positive}}</p>
+            <p>Number of new cases in US: {{statsUS.new}}</p>
+            <p>Number of negative cases in US: {{statsUS.negative}}</p>
+            <p>Number of recovered patients in US: {{statsUS.recovered}}</p>
+            <p>Number of deaths in US: {{statsUS.deaths}}</p>
+            <p>Number of new deaths in US: {{statsUS.newDeaths}}</p>
+            <p>Number of positive cases in MA: {{statsMA.positive}}</p>
+            <p>Number of new cases in MA: {{statsMA.new}}</p>
+            <p>Number of negative cases in MA: {{statsMA.negative}}</p>
+            <p>Number of recovered patients in MA: {{statsMA.recovered}}</p>
+            <p>Number of deaths in MA: {{statsMA.deaths}}</p>
+            <p>Number of new deaths in MA: {{statsMA.newDeaths}}</p> 
+        </div> 
+
+        <div id="bottom">
+            <p>Senior Design Software Mini-Project 2020 </p>
+            <p>&copy Steven Tong & Jaden Tayag 2020</p> 
+        </div>
+
+    </div> 
+</body>
 </html>
