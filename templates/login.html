@@ -2,7 +2,7 @@
 <html> 
 <head> 
     <title>COVID-19 Tracker Portal</title> 
-
+    <!--
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../static/login.css"> 
 
@@ -20,14 +20,27 @@
     
 </head>
 <body>
-        <!-- The surrounding HTML is left untouched by FirebaseUI.
-        Your app may use that space for branding, controls and other customizations.-->
+        The surrounding HTML is left untouched by FirebaseUI.
+        Your app may use that space for branding, controls and other customizations.
         <div  id="container"> 
             <div id="top">
                 <h1>Login Using Email!</h1> 
             </div>
             <div id="firebaseui-auth-container"> 
             </div>
-         </div>  
+         </div>
+        -->
+        <form method ="POST" action ="/home">
+            <p>Email: <input type = "text" id = "email" name ="email"></p>
+            <p>Password: <input type = "password" id = "password" name = "password"></p>
+            <input type = "submit" value = "Login">
+        </form>
+
+        <form method= "POST" action ="/signup">
+            <p>Email: <input type = "text" id = "email1" name ="email1"></p>
+            <p>Password: <input type = "password" id = "password1" name = "password1"></p>
+            <p>Administrator? <input type = "checkbox" id = "admin" name = "admin" value = "1"></p>
+            <input type = "submit" value = "Sign Up">
+        </form>
 </body>
 </html>
