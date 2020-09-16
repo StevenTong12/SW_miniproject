@@ -16,3 +16,10 @@
     color: #e5989b; 
 }
 
+#top a 
+{ 
+    color: #e5989b; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-size: 39px; 
+    letter-spacing: 1px; 
+} 
