@@ -24,6 +24,16 @@ firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
 db = firebase.database()
 
+#signin function using pyrebase
+def signIn(email,password):
+	user = auth.sign_in_with_email_and_password(email,password)
+	return user
+
+#signup function using pyrebase
+def signUp(email,password):
+    auth.create_user_with_email_and_password(email,password)
+
+#symptoms class to store survey info
 class symptoms:
     def __init__(self, fever = 0, cough = 0, nose = 0, loss = 0, sob = 0, throat = 0, vomit = 0, ache = 0):
         self.fever = fever
@@ -35,6 +45,7 @@ class symptoms:
         self.vomit = vomit
         self.ache = ache
 
+#covid stats class to store covid api info
 class covidStats:
     def __init__(self, positive, new, negative, recovered, deaths, newDeaths):
         self.positive = positive
@@ -44,6 +55,7 @@ class covidStats:
         self.deaths = deaths
         self.newDeaths = deaths
 
+#initialize symptom count for the day to 0
 today = date.today()
 initSymptoms = symptoms()
 y = json.dumps(initSymptoms.__dict__)
@@ -51,21 +63,14 @@ y = json.dumps(initSymptoms.__dict__)
 db.child("adminDashboard").child(today).child("completedSurveys").set(0)
 db.child("adminDashboard").child(today).child("symptomTally").set(y)
 
-#signin function using pyrebase
-def signIn(email,password):
-	user = auth.sign_in_with_email_and_password(email,password)
-	return user
-
-#signup function using pyrebase
-def signUp(email,password):
-    auth.create_user_with_email_and_password(email,password)
-
+#all routed pages
 @app.route("/", methods = ['POST','GET'])
 def login():
     return render_template('login.html')
 
 @app.route("/home", methods = ['POST','GET'])
 def home():
+    #login with firebase
     if request.method == "POST":
         email = request.form.get("email")
         password = request.form.get("password")
@@ -77,6 +82,7 @@ def home():
     else:
         return render_template('home.html')
 
+#get email and password and push to database to create usernames
 @app.route("/signup", methods = ['POST','GET'])
 def signup():
     email = request.form.get("email1")
@@ -89,6 +95,7 @@ def signup():
 
 @app.route("/complete", methods = ['POST', 'GET'])
 def complete():
+    #get survey info and push to database for dashboard and symptom tracking
     username = session.get('username')
     today = date.today()
     tally = db.child("adminDashboard").child(today).child("completedSurveys").get().val()
@@ -130,6 +137,7 @@ def help():
 def tips():
     return render_template('tips.html')
 
+#get coronavirus api and stats from database for dashboard
 @app.route("/dashboard", methods = ['POST', 'GET'])
 def dashboard():
     username = session.get('username')
