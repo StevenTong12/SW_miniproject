@@ -51,10 +51,6 @@ y = json.dumps(initSymptoms.__dict__)
 db.child("adminDashboard").child(today).child("completedSurveys").set(0)
 db.child("adminDashboard").child(today).child("symptomTally").set(y)
 
-z = db.child("adminDashboard").child(today).child("symptomTally").get().val()
-z = json.loads(z)
-print(z['fever'])
-
 #signin function using pyrebase
 def signIn(email,password):
 	user = auth.sign_in_with_email_and_password(email,password)
@@ -72,9 +68,7 @@ def login():
 def home():
     if request.method == "POST":
         email = request.form.get("email")
-        print(email)
         password = request.form.get("password")
-        print(password)
         user = signIn(email,password)
         session['user'] = user
         username = email.split('@')[0].lower()
@@ -86,11 +80,8 @@ def home():
 @app.route("/signup", methods = ['POST','GET'])
 def signup():
     email = request.form.get("email1")
-    print(email)
     password = request.form.get("password1")
-    print(password)
     admin = request.form.get("admin")
-    print(admin)
     signUp(email,password)
     username = email.split('@')[0].lower()
     db.child("users").child(username).child("admin").set(admin)
@@ -123,8 +114,6 @@ def complete():
     symptomTotal["ache"] += q8
 
     s = symptoms(q1, q2, q3, q4, q5, q6, q7, q8)
-    print(today)
-    print(s)
 
     y = json.dumps(s.__dict__)
     db.child("users").child(username).child(today).set(y)
